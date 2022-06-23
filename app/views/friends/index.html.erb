@@ -4,7 +4,7 @@
   <% @friends.each do |friend| %>
     <%= render friend %>
     <p>
-      <%= link_to "Show this friend", friend %>
+      <%= link_to "Show this friend", friend if friend.user == current_user%>
     </p>
   <% end %>
 </div>
